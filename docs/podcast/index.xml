@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Podcastより on つみぼん</title>
+    <link>https://www.tsumibon.tamari-b.com/podcast/</link>
+    <description>Recent content in Podcastより on つみぼん</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>copyright @ tamari bar, all right reserved</copyright>
+    <lastBuildDate>Wed, 16 Feb 2022 08:00:00 +0600</lastBuildDate><atom:link href="https://www.tsumibon.tamari-b.com/podcast/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
