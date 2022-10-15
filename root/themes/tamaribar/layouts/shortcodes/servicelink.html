@@ -1,0 +1,47 @@
+{{ $cat := .Get "cat" }}
+
+{{ if eq $cat "podcast1"}}
+  {{ with $.Site.Params.podcast1 }}
+  <div class="container">
+    <div class="list-inline d-flex justify-content-center">
+      {{ range. }}
+      <div class="list-inline-item fa-2x mx-3">
+        <a href="{{ .url | safeURL }}" title="{{ .title }}" target="_blank" rel="noopener noreferrer">
+          <div class="{{ .icon }}"></div>
+        </a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+{{ else if eq $cat "podcast2" }}
+  {{ with $.Site.Params.podcast2 }}
+  <div class="container">
+    <div class="list-inline d-flex justify-content-center">
+      {{ range. }}
+      <div class="list-inline-item fa-2x mx-3">
+        <a href="{{ .url | safeURL }}" title="{{ .title }}" target="_blank" rel="noopener noreferrer">
+          <div class="{{ .icon }}"></div>
+        </a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+{{ else if eq $cat "podcast3" }}
+  {{ with $.Site.Params.podcast3 }}
+  <div class="container">
+    <div class="list-inline d-flex justify-content-center">
+      {{ range. }}
+      <div class="list-inline-item fa-2x mx-3">
+        <a href="{{ .url | safeURL }}" title="{{ .title }}" target="_blank" rel="noopener noreferrer">
+          <div class="{{ .icon }}"></div>
+        </a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+{{ else }}
+<div class="container"></div>
+{{ end }}

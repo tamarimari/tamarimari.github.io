@@ -1,0 +1,78 @@
+{{ define "main" }}
+
+<!-- checking podcast -->
+{{ if or (or (eq .Section "post") (eq .Section "podcast") (eq .Section "article")) (or (eq .Section "categories") (eq .Section "tags") )}}
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        {{ if .Params.image }}
+        <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" class="img-fluid w-100 rounded mb-4">
+        {{ end }}
+        <h6 class="mb-4">{{ .Params.subtitle }}</h6>
+        <h6 class="mb-2">{{ .Params.programNo }}</h6>
+        <h2 class="mb-4">{{ .Title }}</h2>
+
+        <!-- go back to parent section -->
+        
+        {{ with .Parent }}
+        <div class="servicetop_button text-left my-4">
+          <a href="{{ .RelPermalink }}">
+            <div class="btn btn-outline-lightgray">
+              {{ .Title }} 一覧へ
+            </div>
+          </a>
+        </div>
+        {{end}}
+        
+
+        <div class="content">{{.Content}}</div>
+
+        <div class="prev-next">
+          {{ with .Parent.Pages.Next . }}
+          <a href="{{ .RelPermalink }}">
+            <div class="prev-page btn btn-prev-next">
+              <div class="fas fa-angle-left"></div>
+              <div class="prev-and-next">次のシリーズ</div>
+            </div>
+          </a>
+          {{ end }}
+
+          {{ with .Parent.Pages.Prev . }}
+          <a href="{{ .RelPermalink }}">
+            <div class="next-page btn btn-prev-next">
+              <div class="fas fa-angle-right"></div>
+              <div class="prev-and-next">前のシリーズ</div>
+            </div>
+          </a>
+          {{ end }}
+      </div>
+
+        <!-- comments -->
+        {{ if site.DisqusShortname }}
+        <div class="mt-5">
+          {{ template "_internal/disqus.html" . }}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- regular page -->
+{{ else }}
+{{ partial "page-header.html" . }}
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="content">{{ .Content }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+
+{{ end }}

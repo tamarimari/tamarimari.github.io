@@ -1,0 +1,36 @@
+{{ $url := .Get "url" }}
+{{ $title := .Get "title" }}
+{{ $bookAuthor := .Get "bookAuthor" }}
+{{ $publishDate := .Get "publishDate" }}
+{{ $comment := .Get "comment" }}
+
+
+{{ if eq $url "" }}
+<div class="amazon-widget">
+  <div class="linkwrap shadow rounded-lg p-1 w-100" width="48%">
+    <div class="amazon-widget-img mt-4 ml-3 h-75">
+      <img src="/images/no_image.png" />
+    </div>
+    <div class="amazon-widget-info mt-2 mx-4">
+      <div class="amazon-widget-title font-weight-bold">{{ $title }}</div>
+      <div class="amazon-widget-author my-1">著者：{{ $bookAuthor }}</div>
+      <div class="amazon-widget-date my-1">発売日：{{ $publishDate }}</div>
+      <div class="amazon-widgit-comment mt-3">{{ $comment }}</div>
+    </div>
+  </div>
+</div>
+{{ else }}
+<div class="amazon-widget">
+  <a class="linkwrap shadow rounded-lg p-1 w-100" href="{{ $url }}" width="48%" target="_blank" rel="noopener noreferrer">
+    <div class="amazon-widget-img mt-4 ml-3 h-75">
+      <img src="/images/no_image.png" />
+    </div>
+    <div class="amazon-widget-info mt-2 mx-4">
+      <div class="amazon-widget-title font-weight-bold">{{ $title }}</div>
+      <div class="amazon-widget-author my-1">著者：{{ $bookAuthor }}</div>
+      <div class="amazon-widget-date my-1">発売日：{{ $publishDate }}</div>
+      <div class="amazon-widgit-comment mt-3">{{ $comment }}</div>
+    </div>
+  </a>
+</div>
+{{ end }}

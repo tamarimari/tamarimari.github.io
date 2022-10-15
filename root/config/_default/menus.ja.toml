@@ -1,0 +1,85 @@
+### header menu###
+[[main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[main]]
+name = "Podcastより"
+url = "/podcast"
+weight = 2
+
+[[main]]
+name = "絵本"
+url = "/fav/picturebook"
+weight = 3
+
+[[main]]
+name = "小説"
+url = "/fav/novel"
+weight = 4
+
+[[main]]
+name = "漫画"
+url = "/fav/manga"
+weight = 5
+
+[[main]]
+name = "はじめの一冊（ビジネス・科学）"
+url = "/first"
+weight = 6
+
+
+### footer menu ###
+# footer menu left
+[[footer_left]]
+name = "超相対性理論"
+url = "/podcast/podcast1"
+weight = 1
+
+[[footer_left]]
+name = "ゆる言語学ラジオ"
+url = "/podcast/podcast2"
+weight = 2
+
+[[footer_left]]
+name = "コテンラジオ"
+url = "/podcast/podcast3"
+weight = 3
+
+# footer menu middle
+[[footer_middle]]
+name = "絵本"
+url = "/fav/picturebook"
+weight = 1
+
+[[footer_middle]]
+name = "小説"
+url = "/fav/novel"
+weight = 2
+
+[[footer_middle]]
+name = "漫画"
+url = "/fav/manga"
+weight = 3
+
+[[footer_middle]]
+name = "はじめの一冊（ビジネス・科学）"
+url = "/first"
+weight = 4
+
+# footer menu right
+[[footer_right]]
+name = "つみぼんについて"
+url = "/about"
+weight = 1
+
+[[footer_right]]
+name = "運営者情報"
+url = "/contact"
+weight = 2
+
+[[footer_right]]
+name = "記事・特集"
+url = "/article"
+weight = 3
